@@ -1,8 +1,16 @@
 package com.learning.jpaandhibernate.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity(name="course")
 public class Course {
+    @Id
     private int id;
+    @Column(name="name") //we can skip this anntn if names are same as of db table
     private String name;
+    @Column(name="author")
     private String author;
 
     public Course() {
