@@ -446,7 +446,7 @@ public class Todo {
 		this.targetDate = targetDate;
 	}
 
-	public boolean isDone() {
+	public boolean done() {
 		return done;
 	}
 
@@ -1648,7 +1648,7 @@ public class TodoControllerJpa {
 		todo.setUsername(username);
 		todoRepository.save(todo);
 //		todoService.addTodo(username, todo.getDescription(), 
-//				todo.getTargetDate(), todo.isDone());
+//				todo.getTargetDate(), todo.done());
 		return "redirect:list-todos";
 	}
 

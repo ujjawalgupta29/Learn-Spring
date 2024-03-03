@@ -4,9 +4,9 @@
     </head>
     <body>
         <div>
-            Welcome to my App
-            ${name}
-            ${password}
+            Welcome ${name}
+            <hr>
+            <a href="listTodos">Manage</a? Todos
         </div>
     </body>
 </html>
