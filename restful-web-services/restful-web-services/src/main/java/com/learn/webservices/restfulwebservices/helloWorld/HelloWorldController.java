@@ -14,13 +14,11 @@ public class HelloWorldController {
     }
 
     @GetMapping(path = "hello-world-bean")
-    @ResponseBody
     public HelloWorldBean helloWorldBean() {
         return new HelloWorldBean("Hello World!");
     }
 
     @GetMapping(path = "hello-world/path-variable/{name}")
-    @ResponseBody
     public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
         return new HelloWorldBean("Hello - " + name);
     }
