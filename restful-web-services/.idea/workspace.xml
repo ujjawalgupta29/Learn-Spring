@@ -5,20 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6069fe94-d187-4ae6-ad88-d71dcb0d08a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/restful-web-services/src/main/java/com/learn/webservices/restfulwebservices/jpa/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/restful-web-services.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/restful-web-services.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/restful-web-services/src/main/java/com/learn/webservices/restfulwebservices/security/SpringSecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/restful-web-services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/restful-web-services/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-services/src/main/java/com/learn/webservices/restfulwebservices/user/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/restful-web-services/src/main/java/com/learn/webservices/restfulwebservices/user/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-services/src/main/java/com/learn/webservices/restfulwebservices/user/UserJpaResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/restful-web-services/src/main/java/com/learn/webservices/restfulwebservices/user/UserJpaResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/restful-web-services/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/restful-web-services/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -31,6 +33,9 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2dnqV9EtqO5BaWHexn2lKNX03WE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
