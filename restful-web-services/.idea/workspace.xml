@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6069fe94-d187-4ae6-ad88-d71dcb0d08a6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/restful-web-services/src/main/java/com/learn/webservices/restfulwebservices/security/SpringSecurityConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/restful-web-services/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restful-web-services/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/restful-web-services/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,17 +37,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.RestfulWebServicesApplication.executor": "Run",
-    "Remote JVM Debug.Unnamed.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Admin/Downloads/Spring/restful-web-services"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.RestfulWebServicesApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Remote JVM Debug.Unnamed.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Admin/Downloads/Spring/restful-web-services&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.RestfulWebServicesApplication">
     <configuration name="RestfulWebServicesApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.learn.webservices.restfulwebservices.RestfulWebServicesApplication" />
