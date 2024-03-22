@@ -1,38 +1,28 @@
 import { useState } from 'react';
 import './Counter.css';
-import {PropTypes} from 'prop-types';
+import CounterButton from '../CounterButton/CounterButton';
 
-export default function Counter({by}) {
 
+export default function Counter() {
     const [count, setCount] = useState(0);
 
-    function incrementCounterFunction() {
-        setCount(count + by)
+    function incrementCounterParentFunction(by) {
+        setCount(count + by);
     }
 
-    function decrementCounterFunction() {
-        setCount(count - by)
+    function resetCounter() {
+        setCount(0);
     }
 
     return (
-        <div className="Counter">
-            <span className="count">{count}</span>
-            <div>
-                <button className="counterButton" onClick={incrementCounterFunction}
-                // style={ buttonStyle }
-                >+{by}</button>
+        <>
+            <span className="totalCount">{count}</span>
+            <CounterButton incrementMethod={incrementCounterParentFunction}/>
+            <CounterButton by={2} incrementMethod={incrementCounterParentFunction}/>
+            <CounterButton by={5} incrementMethod={incrementCounterParentFunction}/>
 
-                <button className="counterButton" onClick={decrementCounterFunction}
-                >-{by}</button>
-            </div>
-        </div>
-    );
+            <button className='resetButton' onClick={resetCounter}>Reset</button>
+        </>
+    )
 }
 
-Counter.propTypes = {
-    by: PropTypes.number //to support only numbers
-}
-
-Counter.defaultProps = {
-    by: 1
-}
