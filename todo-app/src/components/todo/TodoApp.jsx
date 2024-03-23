@@ -1,11 +1,18 @@
 import { useState } from 'react';
+import {BrowserRouter, Routes, Route, useNavigate} from 'react-router-dom';
 import './TodoApp.css';
 
 export default function TodoApp() {
     return (
         <div className="TodoApp">
-            <LoginComponent/>
-            {/* <WelcomeComponent/> */}
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<LoginComponent/>}></Route>
+                    <Route path='/login' element={<LoginComponent/>}></Route>
+                    <Route path='/welcome' element={<WelcomeComponent/>}></Route>
+                    <Route path='*' element={<ErrorComponent/>}></Route>
+                </Routes>
+            </BrowserRouter>
         </div>
     )
 }
@@ -15,6 +22,8 @@ function LoginComponent() {
     const [password, setPassword] = useState('')
     const [showSuccessMsg, setShowSuccessMsg] = useState(false)
     const [showErrorMsg, setShowErrorMsg] = useState(false)
+
+    const navigate = useNavigate();
 
     function handleUsernameChange(event) {
         setUsername(event.target.value)
@@ -28,6 +37,7 @@ function LoginComponent() {
         if(username === 'Ujjawal' && password === '123') {
             setShowSuccessMsg(true)
             setShowErrorMsg(false)
+            navigate('/welcome')
         }
         else {
             setShowSuccessMsg(false)
@@ -35,27 +45,11 @@ function LoginComponent() {
         }
     }
 
-    function SuccessMsg() {
-        if(showSuccessMsg) {
-            return <div className='sucessMessage'>Authenticated Successfully</div>
-        }
-        
-        return null
-    }
-    
-    function ErrorMsg() {
-        if(showErrorMsg) {
-            return <div className='errorMessage'>Authenticated Failed. Please check creds.</div>
-        }
-        
-        return null
-    }
-
     return (
         <div className="Login">
             <div className="LoginForm">
-                <SuccessMsg/>
-                <ErrorMsg/>
+                {showSuccessMsg && <div className='sucessMessage'>Authenticated Successfully</div>}
+                {showErrorMsg && <div className='errorMessage'>Authenticated Failed. Please check creds.</div>}
                 <div>
                     <label>Username</label>
                     <input type="text" name="username" value={username} onChange={handleUsernameChange}/>
@@ -67,6 +61,25 @@ function LoginComponent() {
                 <div>
                     <button type="button" name="login" onClick={handleSubmit}>Login</button>
                 </div>
+            </div>
+        </div>
+    )
+}
+
+function WelcomeComponent() {
+    return (
+        <div className='Welcome'>
+            Welcome
+        </div>
+    )
+}
+
+function ErrorComponent() {
+    return (
+        <div className='ErrorComponnet'>
+            <h1>We are working hard!</h1>
+            <div>
+                404
             </div>
         </div>
     )
