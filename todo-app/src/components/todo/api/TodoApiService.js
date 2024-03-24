@@ -14,3 +14,7 @@ export function retrieveAllTodosForUserApi(username) {
 export function deleteTodoApi(username, id) {
     return apiClient.delete(`/users/${username}/todos/${id}`)
 }
+
+export function retrieveTodo(username, id) {
+    return apiClient.get(`/users/${username}/todos/${id}`)
+}
