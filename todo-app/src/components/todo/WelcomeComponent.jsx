@@ -9,7 +9,7 @@ export default function WelcomeComponent() {
     const [message, setMessage] = useState(null);
 
     function callHelloWorldApi() {
-        retrieveHelloWorldPathVariable('Ujju1')
+        retrieveHelloWorldPathVariable('Ujjawal')
         .then((response) => successfulResponse(response))
         .catch((error) => errorResponse(error))
         .finally(() => console.log('cleanup'));
