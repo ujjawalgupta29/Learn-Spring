@@ -3,7 +3,7 @@ package com.learning.mockito.mockitolearn.business;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class SomeBusinessImplTest {
+public class SomeBusinessImplStubTest {
 
     @Test
     void test() {
@@ -21,3 +21,6 @@ class DataServiceStub implements DataService {
         return new int[] {25, 15, 5};
     }
 }
+
+//Disadv -> we need to implement class again and again for different cases, also its not
+// mantainable as if we add new methods to interface ewe need to update all the stubs as well
