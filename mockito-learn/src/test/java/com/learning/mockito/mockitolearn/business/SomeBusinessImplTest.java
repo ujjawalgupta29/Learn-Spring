@@ -7,8 +7,8 @@ public class SomeBusinessImplTest {
 
     @Test
     void test() {
-        DataServiceStub dataServiceStub = new DataServiceStub();
-        SomeBusinessImpl businessImpl = new SomeBusinessImpl(dataServiceStub);
+        DataService dataService = new DataServiceStub();
+        SomeBusinessImpl businessImpl = new SomeBusinessImpl(dataService);
         int result = businessImpl.findGreatestFromAllData();
         Assertions.assertEquals(25, result);
     }
