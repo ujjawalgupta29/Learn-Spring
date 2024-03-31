@@ -1,6 +1,7 @@
 package com.learning.learnaop;
 
 import com.learning.learnaop.aopExample.business.BusinessService1;
+import com.learning.learnaop.aopExample.business.BusinessService2;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,9 @@ public class LearnAopApplication implements CommandLineRunner {
 	@Autowired
 	private BusinessService1 businessService1;
 
+	@Autowired
+	private BusinessService2 businessService2;
+
 	public static void main(String[] args) {
 		SpringApplication.run(LearnAopApplication.class, args);
 	}
@@ -23,5 +27,6 @@ public class LearnAopApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		logger.info("Value returned is {}", businessService1.calculateMax());
+		logger.info("Value returned is {}", businessService2.calculateMin());
 	}
 }

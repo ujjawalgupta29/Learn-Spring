@@ -1,21 +1,20 @@
 package com.learning.learnaop.aopExample.business;
 
 import com.learning.learnaop.aopExample.annotations.TrackTime;
-import com.learning.learnaop.aopExample.data.DataService1;
+import com.learning.learnaop.aopExample.data.DataService2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 
 @Service
-public class BusinessService1 {
+public class BusinessService2 {
     @Autowired
-    private DataService1 dataService1;
+    private DataService2 dataService2;
 
-    @TrackTime
-    public int calculateMax() {
-        int[] data = dataService1.retrieveData();
+    public int calculateMin() {
+        int[] data = dataService2.retrieveData();
 //        throw new RuntimeException("Something went wrong");
-        return Arrays.stream(data).max().orElse(0);
+        return Arrays.stream(data).min().orElse(0);
     }
 }
