@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class PerformanceTrackingAspect {
 
     private Logger logger = LoggerFactory.getLogger(getClass());
-    @Around("execution(* com.learning.learnaop.aopExample.*.*.*(..))")
+    @Around("com.learning.learnaop.aopExample.aspects.CommonPointcutConfig.businessAndDataPackageConfig()")
     public Object findExecutionTime(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         //Start a timer
         long startTimeMillis = System.currentTimeMillis();

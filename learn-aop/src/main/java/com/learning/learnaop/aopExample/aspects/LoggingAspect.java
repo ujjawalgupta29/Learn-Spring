@@ -16,18 +16,18 @@ public class LoggingAspect {
     private Logger logger = LoggerFactory.getLogger((getClass()));
 
     //PointCut -> When to do?
-    @Before("execution(* com.learning.learnaop.aopExample.*.*.*(..))")
+    @Before("com.learning.learnaop.aopExample.aspects.CommonPointcutConfig.allPackageConfigUsingBean()")
     public void logMethodCallBefore(JoinPoint joinPoint) {
         logger.info("Before Aspect - {} is called with args {}", joinPoint, joinPoint.getArgs());
     }
 
-    @After("execution(* com.learning.learnaop.aopExample.*.*.*(..))")
+    @After("com.learning.learnaop.aopExample.aspects.CommonPointcutConfig.businessPackageConfig()")
     public void logMethodCallAfter(JoinPoint joinPoint) {
         logger.info("After Aspect - {} has executed", joinPoint);
     }
 
     @AfterThrowing(
-            pointcut = "execution(* com.learning.learnaop.aopExample.*.*.*(..))",
+            pointcut = "com.learning.learnaop.aopExample.aspects.CommonPointcutConfig.dataPackageConfig()",
             throwing = "exception"
     )
     public void logMethodCallAfterThrowing(JoinPoint joinPoint, Exception exception) {
@@ -35,7 +35,7 @@ public class LoggingAspect {
     }
 
     @AfterReturning(
-            pointcut = "execution(* com.learning.learnaop.aopExample.*.*.*(..))",
+            pointcut = "com.learning.learnaop.aopExample.aspects.CommonPointcutConfig.dataPackageConfig()",
             returning = "resultValue"
     )
     public void logMethodCallAfterReturning(JoinPoint joinPoint, Object resultValue) {
