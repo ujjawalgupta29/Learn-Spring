@@ -1,7 +1,7 @@
 # Dockerfile Examples
 
 ## Docker commands
-- docker build -t in28min/hello-world-docker:v1 .
+- docker build -t ujjawalgupta29/hello-world-docker:v1 .
 
 
 ## Dockerfile - 1 - Creating Docker Images
@@ -29,12 +29,14 @@ ENTRYPOINT [ "sh", "-c", "java -jar /app.jar" ]
 
 ## Dockerfile - 3 - Caching
 
+Here we are copying Spring Application file and pom file as they will change less and till layer 5 docker will use cached layer.
+
 ```
 FROM maven:3.8.6-openjdk-18-slim AS build
 WORKDIR /home/app
 
 COPY ./pom.xml /home/app/pom.xml
-COPY ./src/main/java/com/in28minutes/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java	/home/app/src/main/java/com/in28minutes/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java
+COPY ./src/main/java/com/learningDocker/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java	/home/app/src/main/java/com/learningDocker/rest/webservices/restfulwebservices/RestfulWebServicesApplication.java
 
 RUN mvn -f /home/app/pom.xml clean package
 
